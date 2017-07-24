@@ -7,6 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3B9CA81D1F263966005DE8E5 /* InitialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B9CA81C1F263966005DE8E5 /* InitialViewController.swift */; };
+		3B9CA81E1F263966005DE8E5 /* InitialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B9CA81C1F263966005DE8E5 /* InitialViewController.swift */; };
+		3B9CA8211F2639DF005DE8E5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3B9CA81F1F2639DF005DE8E5 /* Main.storyboard */; };
+		3B9CA8221F2639DF005DE8E5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3B9CA81F1F2639DF005DE8E5 /* Main.storyboard */; };
+		3B9CA8251F263A5F005DE8E5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3B9CA8231F263A5F005DE8E5 /* LaunchScreen.storyboard */; };
+		3B9CA8261F263A5F005DE8E5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3B9CA8231F263A5F005DE8E5 /* LaunchScreen.storyboard */; };
+		3B9CA8281F263AC8005DE8E5 /* PhotoDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B9CA8271F263AC8005DE8E5 /* PhotoDetailsViewController.swift */; };
+		3B9CA8291F263AC8005DE8E5 /* PhotoDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B9CA8271F263AC8005DE8E5 /* PhotoDetailsViewController.swift */; };
 		DE07428C14F0441500439550 /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE07428B14F0441500439550 /* Accelerate.framework */; };
 		DE0D6C8A15AB4E100040318C /* Space4.jpg in Resources */ = {isa = PBXBuildFile; fileRef = DE0D6C8815AB4E100040318C /* Space4.jpg */; };
 		DE0D6C8B15AB4E100040318C /* Space4.jpg in Resources */ = {isa = PBXBuildFile; fileRef = DE0D6C8815AB4E100040318C /* Space4.jpg */; };
@@ -172,6 +180,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3B9CA81A1F263966005DE8E5 /* PhotoScrollerNetwork-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "PhotoScrollerNetwork-Bridging-Header.h"; sourceTree = "<group>"; };
+		3B9CA81B1F263966005DE8E5 /* PhotoScrollerNetworkTurbo-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "PhotoScrollerNetworkTurbo-Bridging-Header.h"; sourceTree = "<group>"; };
+		3B9CA81C1F263966005DE8E5 /* InitialViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InitialViewController.swift; sourceTree = "<group>"; };
+		3B9CA8201F2639DF005DE8E5 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/Main.storyboard; sourceTree = "<group>"; };
+		3B9CA8241F263A5F005DE8E5 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = PhotoScroller/en.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		3B9CA8271F263AC8005DE8E5 /* PhotoDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoDetailsViewController.swift; sourceTree = "<group>"; };
 		DE07428B14F0441500439550 /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = System/Library/Frameworks/Accelerate.framework; sourceTree = SDKROOT; };
 		DE0D6C8815AB4E100040318C /* Space4.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Space4.jpg; sourceTree = "<group>"; };
 		DE0D6C8915AB4E100040318C /* Space5.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Space5.jpg; sourceTree = "<group>"; };
@@ -319,6 +333,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3B9CA8191F26394D005DE8E5 /* Swift */ = {
+			isa = PBXGroup;
+			children = (
+				3B9CA81C1F263966005DE8E5 /* InitialViewController.swift */,
+				3B9CA8271F263AC8005DE8E5 /* PhotoDetailsViewController.swift */,
+				3B9CA81A1F263966005DE8E5 /* PhotoScrollerNetwork-Bridging-Header.h */,
+				3B9CA81B1F263966005DE8E5 /* PhotoScrollerNetworkTurbo-Bridging-Header.h */,
+			);
+			path = Swift;
+			sourceTree = "<group>";
+		};
 		DE4AD92214DC783D00D63E5A = {
 			isa = PBXGroup;
 			children = (
@@ -389,6 +414,8 @@
 			children = (
 				DEC616911A339B3500BB265D /* Network */,
 				DE4AD94F14DC788F00D63E5A /* Classes */,
+				3B9CA81F1F2639DF005DE8E5 /* Main.storyboard */,
+				3B9CA8231F263A5F005DE8E5 /* LaunchScreen.storyboard */,
 				DE4AD95B14DC788F00D63E5A /* MainWindow.xib */,
 				DE4AD95D14DC788F00D63E5A /* PhotoViewController.xib */,
 				DE3EC2AC151CC50300921348 /* PhotoViewController~ipad.xib */,
@@ -402,6 +429,7 @@
 		DE4AD94F14DC788F00D63E5A /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				3B9CA8191F26394D005DE8E5 /* Swift */,
 				DE4AD95614DC788F00D63E5A /* SaveMe.txt */,
 				DEA67612151B87DC009CC825 /* PhotoScrollerCommon.h */,
 				DE4AD95214DC788F00D63E5A /* ImageScrollView.h */,
@@ -590,6 +618,14 @@
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 0700;
+				TargetAttributes = {
+					DE4AD92C14DC783D00D63E5A = {
+						LastSwiftMigration = 0830;
+					};
+					DE4ADA1E14E1A56500D63E5A = {
+						LastSwiftMigration = 0830;
+					};
+				};
 			};
 			buildConfigurationList = DE4AD92714DC783D00D63E5A /* Build configuration list for PBXProject "PhotoScrollerNetwork" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -677,9 +713,11 @@
 				DE4AD98114DC788F00D63E5A /* SaveMe.txt in Resources */,
 				DE4AD98614DC788F00D63E5A /* ImageData.plist in Resources */,
 				DE4AD98714DC788F00D63E5A /* Default.png in Resources */,
+				3B9CA8211F2639DF005DE8E5 /* Main.storyboard in Resources */,
 				DE4AD98914DC788F00D63E5A /* Lake.jpg in Resources */,
 				DE4AD98C14DC788F00D63E5A /* Shed.jpg in Resources */,
 				DE4AD98F14DC788F00D63E5A /* Tree.jpg in Resources */,
+				3B9CA8251F263A5F005DE8E5 /* LaunchScreen.storyboard in Resources */,
 				DE4AD99014DC788F00D63E5A /* Icon-72.png in Resources */,
 				DE4AD99114DC788F00D63E5A /* Icon-Small-50.png in Resources */,
 				DE4AD99214DC788F00D63E5A /* Icon-Small.png in Resources */,
@@ -705,9 +743,11 @@
 				DE4ADA3114E1A56500D63E5A /* SaveMe.txt in Resources */,
 				DE4ADA3214E1A56500D63E5A /* ImageData.plist in Resources */,
 				DE4ADA3314E1A56500D63E5A /* Default.png in Resources */,
+				3B9CA8221F2639DF005DE8E5 /* Main.storyboard in Resources */,
 				DE4ADA3414E1A56500D63E5A /* Lake.jpg in Resources */,
 				DE4ADA3514E1A56500D63E5A /* Shed.jpg in Resources */,
 				DE4ADA3614E1A56500D63E5A /* Tree.jpg in Resources */,
+				3B9CA8261F263A5F005DE8E5 /* LaunchScreen.storyboard in Resources */,
 				DE4ADA3714E1A56500D63E5A /* Icon-72.png in Resources */,
 				DE4ADA3814E1A56500D63E5A /* Icon-Small-50.png in Resources */,
 				DE4ADA3914E1A56500D63E5A /* Icon-Small.png in Resources */,
@@ -802,6 +842,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DE4AD93E14DC783D00D63E5A /* main.m in Sources */,
+				3B9CA81D1F263966005DE8E5 /* InitialViewController.swift in Sources */,
 				DE4AD94214DC783D00D63E5A /* AppDelegate.m in Sources */,
 				DE4AD94514DC783D00D63E5A /* ViewController.m in Sources */,
 				DE4AD97F14DC788F00D63E5A /* ImageScrollView.m in Sources */,
@@ -811,6 +852,7 @@
 				DE4AD98214DC788F00D63E5A /* TiledImageBuilder.m in Sources */,
 				DEC616B51A33BE3F00BB265D /* WebFetcher8.m in Sources */,
 				DE4AD98314DC788F00D63E5A /* TilingView.m in Sources */,
+				3B9CA8281F263AC8005DE8E5 /* PhotoDetailsViewController.swift in Sources */,
 				DE7AB8FD15309BD200C4CFE7 /* TiledImageBuilder+Draw.m in Sources */,
 				DE7AB90115309BD200C4CFE7 /* TiledImageBuilder+Tile.m in Sources */,
 				DEC616B61A33CD0800BB265D /* ConcurrentOp.m in Sources */,
@@ -821,9 +863,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3B9CA81E1F263966005DE8E5 /* InitialViewController.swift in Sources */,
 				DE4ADA2014E1A56500D63E5A /* main.m in Sources */,
 				DE4ADA2114E1A56500D63E5A /* AppDelegate.m in Sources */,
 				DE4ADA2214E1A56500D63E5A /* ViewController.m in Sources */,
+				3B9CA8291F263AC8005DE8E5 /* PhotoDetailsViewController.swift in Sources */,
 				DE4ADA2314E1A56500D63E5A /* ImageScrollView.m in Sources */,
 				DEC616A01A339C3000BB265D /* OperationsRunner8.m in Sources */,
 				DE4ADA2414E1A56500D63E5A /* PhotoViewController.m in Sources */,
@@ -841,6 +885,23 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
+		3B9CA81F1F2639DF005DE8E5 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3B9CA8201F2639DF005DE8E5 /* en */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		3B9CA8231F263A5F005DE8E5 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3B9CA8241F263A5F005DE8E5 /* en */,
+			);
+			name = LaunchScreen.storyboard;
+			path = ..;
+			sourceTree = "<group>";
+		};
 		DE3EC2AA151CC50300921348 /* ViewController~ipad.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -1053,11 +1114,16 @@
 		DE4AD94C14DC783D00D63E5A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "PhotoScrollerNetwork/PhotoScrollerNetwork-Prefix.pch";
 				INFOPLIST_FILE = "PhotoScrollerNetwork/PhotoScrollerNetwork-Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "company.dfh.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "PhotoScroller/Classes/Swift/PhotoScrollerNetwork-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -1065,12 +1131,16 @@
 		DE4AD94D14DC783D00D63E5A /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "PhotoScrollerNetwork/PhotoScrollerNetwork-Prefix.pch";
 				INFOPLIST_FILE = "PhotoScrollerNetwork/PhotoScrollerNetwork-Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "company.dfh.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRIP_INSTALLED_PRODUCT = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "PhotoScroller/Classes/Swift/PhotoScrollerNetwork-Bridging-Header.h";
+				SWIFT_VERSION = 3.0;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -1078,13 +1148,18 @@
 		DE4ADA4414E1A56500D63E5A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "PhotoScrollerNetwork/PhotoScrollerNetwork-Prefix.pch";
 				INFOPLIST_FILE = "PhotoScrollerNetwork/PhotoScrollerNetwork-Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = "\"$(SRCROOT)/libturbojpeg\"";
 				OTHER_CFLAGS = "-DLIBJPEG";
 				PRODUCT_BUNDLE_IDENTIFIER = "company.dfh.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = PhotoScrollerNetworkTurbo;
+				SWIFT_OBJC_BRIDGING_HEADER = "PhotoScroller/Classes/Swift/PhotoScrollerNetworkTurbo-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
 				USER_HEADER_SEARCH_PATHS = "\"$(SRCROOT)/libturbojpeg\"";
 				WRAPPER_EXTENSION = app;
 			};
@@ -1093,9 +1168,11 @@
 		DE4ADA4514E1A56500D63E5A /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "PhotoScrollerNetwork/PhotoScrollerNetwork-Prefix.pch";
 				INFOPLIST_FILE = "PhotoScrollerNetwork/PhotoScrollerNetwork-Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = "\"$(SRCROOT)/libturbojpeg\"";
 				OTHER_CFLAGS = (
 					"-DLIBJPEG",
@@ -1105,6 +1182,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "company.dfh.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = PhotoScrollerNetworkTurbo;
 				STRIP_INSTALLED_PRODUCT = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "PhotoScroller/Classes/Swift/PhotoScrollerNetworkTurbo-Bridging-Header.h";
+				SWIFT_VERSION = 3.0;
 				USER_HEADER_SEARCH_PATHS = "\"$(SRCROOT)/libturbojpeg\"";
 				WRAPPER_EXTENSION = app;
 			};
@@ -1144,11 +1223,15 @@
 		DE588D5F14E81ABA00C7E151 /* ReleaseWithAsserts */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "PhotoScrollerNetwork/PhotoScrollerNetwork-Prefix.pch";
 				INFOPLIST_FILE = "PhotoScrollerNetwork/PhotoScrollerNetwork-Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "company.dfh.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "PhotoScroller/Classes/Swift/PhotoScrollerNetwork-Bridging-Header.h";
+				SWIFT_VERSION = 3.0;
 				WRAPPER_EXTENSION = app;
 			};
 			name = ReleaseWithAsserts;
@@ -1156,13 +1239,17 @@
 		DE588D6014E81ABA00C7E151 /* ReleaseWithAsserts */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "PhotoScrollerNetwork/PhotoScrollerNetwork-Prefix.pch";
 				INFOPLIST_FILE = "PhotoScrollerNetwork/PhotoScrollerNetwork-Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = "\"$(SRCROOT)/libturbojpeg\"";
 				OTHER_CFLAGS = "-DLIBJPEG";
 				PRODUCT_BUNDLE_IDENTIFIER = "company.dfh.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = PhotoScrollerNetworkTurbo;
+				SWIFT_OBJC_BRIDGING_HEADER = "PhotoScroller/Classes/Swift/PhotoScrollerNetworkTurbo-Bridging-Header.h";
+				SWIFT_VERSION = 3.0;
 				USER_HEADER_SEARCH_PATHS = "\"$(SRCROOT)/libturbojpeg\"";
 				WRAPPER_EXTENSION = app;
 			};

@@ -35,6 +35,8 @@
  *
  * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
 
+#import <Foundation/Foundation.h>
+
 typedef NS_ENUM(NSInteger, imageDecoder) {
 	cgimageDecoder=0,		// Use CGImage
 	libjpegTurboDecoder,	// Use libjpeg-turbo, but not incrementally (used when loading a local file)

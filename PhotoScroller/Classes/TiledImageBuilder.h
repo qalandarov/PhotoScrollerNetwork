@@ -64,6 +64,7 @@
  */
  
 #import "PhotoScrollerCommon.h"
+#import <UIKit/UIKit.h>
  
 @interface TiledImageBuilder : NSObject
 @property (nonatomic, strong, readonly) NSDictionary *properties;	// image properties from CGImageSourceCopyPropertiesAtIndex()

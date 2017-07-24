@@ -57,6 +57,8 @@ AppDelegate *appDelegate;
 {
 	appDelegate = self;
 
+#if Swift
+#else
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
 	vc = [[ViewController alloc] initWithNibName:@"ViewController" bundle:nil];
@@ -65,6 +67,8 @@ AppDelegate *appDelegate;
 	
 	self.window.rootViewController = self.viewController;
     [self.window makeKeyAndVisible];
+#endif
+    
     return YES;
 }
 

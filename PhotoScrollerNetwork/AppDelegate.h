@@ -40,6 +40,7 @@
 
 extern AppDelegate *appDelegate;
 
+#define Swift  1
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 
