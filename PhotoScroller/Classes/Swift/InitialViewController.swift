@@ -14,10 +14,6 @@ class InitialViewController: UIViewController {
     
     var imageName = "Space5"
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-    }
-    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let vc = segue.destination as? PhotoDetailsViewController {
             vc.imageName = imageName
