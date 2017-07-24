@@ -65,6 +65,7 @@
                         <barButtonItem key="backBarButtonItem" title=" " id="Z6W-ea-onQ"/>
                     </navigationItem>
                     <connections>
+                        <outlet property="networkSwitch" destination="DIq-jz-pz9" id="hxa-eQ-yBm"/>
                         <outlet property="segmentedControl" destination="4BF-HV-wRK" id="VaX-LF-zmp"/>
                     </connections>
                 </viewController>

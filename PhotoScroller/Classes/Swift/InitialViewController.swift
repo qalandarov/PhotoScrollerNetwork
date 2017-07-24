@@ -11,6 +11,7 @@ import UIKit
 class InitialViewController: UIViewController {
     
     @IBOutlet weak var segmentedControl: UISegmentedControl!
+    @IBOutlet weak var networkSwitch: UISwitch!
     
     var imageName = "Space5"
     
@@ -18,6 +19,7 @@ class InitialViewController: UIViewController {
         if let vc = segue.destination as? PhotoDetailsViewController {
             vc.imageName = imageName
             vc.decoder   = imageDecoder(rawValue: segmentedControl.selectedSegmentIndex)
+            vc.isWebTest = networkSwitch.isOn
         }
     }
 

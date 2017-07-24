@@ -16,8 +16,16 @@ class PhotoDetailsViewController: UIViewController {
     
     var imageName: String!
     var decoder: imageDecoder!
+    var isWebTest = false
     
     fileprivate var tiler: TiledImageBuilder?
+    fileprivate var startTime: UInt64 = 0
+    fileprivate var operationsRunner: OperationsRunner?
+    
+    private var elapsedTime: UInt64 {
+        let finishTime = mach_absolute_time()
+        return deltaMAT(from: startTime, till: finishTime)
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,9 +35,81 @@ class PhotoDetailsViewController: UIViewController {
             return
         }
         
-        constructStaticImages()
+        startTime = mach_absolute_time()
+        
+        if isWebTest {
+            prepareNetworkMode()
+            fetchWebImages()
+        } else {
+            constructStaticImages()
+        }
     }
     
+    fileprivate func updateUI() {
+        spinner.stopAnimating()
+        tilePages()
+        title = "DecodeTime: \(elapsedTime) ms"
+    }
+    
+    private func deltaMAT(from start: UInt64, till finish: UInt64) -> UInt64 {
+        var delta = finish - start
+        
+        /* Get the timebase info */
+        var info = mach_timebase_info(numer: 0, denom: 0)
+        mach_timebase_info(&info)
+        
+        /* Convert to nanoseconds */
+        delta *= UInt64(info.numer)
+        delta /= UInt64(info.denom)
+        
+        return UInt64(Double(delta) / 1e6) // ms
+    }
+    
+}
+
+
+// MARK: - Networking
+
+extension PhotoDetailsViewController {
+    
+    fileprivate func prepareNetworkMode() {
+        let config = URLSessionConfiguration.default
+        config.urlCache = nil
+        config.httpShouldSetCookies = true
+        config.httpShouldUsePipelining = true
+        
+        OperationsRunner.createSharedSession(with: config, delegate: ORSessionDelegate())
+        
+        operationsRunner = OperationsRunner(delegate: self)
+    }
+    
+    fileprivate func fetchWebImages() {
+        let path = "https://www.dropbox.com/s/w0s5905cqkcy4ua/Space5.jpg?dl=1"
+        
+        let operation = ConcurrentOp()
+        operation.urlStr = path
+        operation.decoder = decoder
+        operation.index = 0
+        operation.orientation = 0
+        
+        operationsRunner?.runOperation(operation, withMsg: path)
+    }
+    
+}
+
+extension PhotoDetailsViewController: OperationsRunnerProtocol {
+    func operationFinished(_ op: ORWebFetcher!, count remainingOps: UInt) {
+        guard let operation = op as? ConcurrentOp, let tiler = operation.imageBuilder else {
+            assertionFailure("Operation object is corrupt")
+            return
+        }
+        
+        self.tiler = tiler
+        
+        if remainingOps == 0 {
+            updateUI()
+        }
+    }
 }
 
 
@@ -46,14 +126,12 @@ extension PhotoDetailsViewController {
                                            orientation: 0)
             
             DispatchQueue.main.async {
-                self.spinner.stopAnimating()
-                self.tilePages()
-                self.title = "Decode time: \(self.tiler?.milliSeconds ?? 0)"
+                self.updateUI()
             }
         }
     }
     
-    private func tilePages() {
+    fileprivate func tilePages() {
         let page = ImageScrollView()
         page.aspectFill = true
         page.frame = view.bounds
